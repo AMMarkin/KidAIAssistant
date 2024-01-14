@@ -11,9 +11,12 @@ builder.Services.AddSingleton<GptService>();
 builder.Services.AddSingleton<FileService>();
 builder.Services.AddSingleton<ImageService>();
 
-builder.Services.AddSingleton<OpenAiDataProvider>(f => new() { ApiKey = builder.Configuration["GPT:ApiKey"]!});
-builder.Services.AddSingleton<BotDataProvider>(f => new() 
-{ 
+builder.Services.AddSingleton<OpenAiDataProvider>(f => new()
+{
+    ApiKey = builder.Configuration["GPT:ApiKey"]!
+});
+builder.Services.AddSingleton<BotDataProvider>(f => new()
+{
     Token = builder.Configuration["BotData:TokenApi"]!,
     EnabledImages = builder.Configuration.GetValue<bool>("BotData:EnabledImages")
 });

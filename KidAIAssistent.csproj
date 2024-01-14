@@ -16,11 +16,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Telegram.Bot" Version="19.0.0" />
+    <Compile Remove="voices\**" />
+    <Content Remove="voices\**" />
+    <EmbeddedResource Remove="voices\**" />
+    <None Remove="voices\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="voices\" />
+    <PackageReference Include="Telegram.Bot" Version="19.0.0" />
   </ItemGroup>
 
 </Project>

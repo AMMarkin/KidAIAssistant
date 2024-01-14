@@ -33,7 +33,7 @@ public class Bot(
             HandleExceptionAsync,
             receiverOptions: new ReceiverOptions()
             {
-                AllowedUpdates = new[] { UpdateType.Message }
+                AllowedUpdates = [UpdateType.Message]
             },
             new CancellationTokenSource().Token
         );
